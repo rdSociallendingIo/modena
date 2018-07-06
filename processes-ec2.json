@@ -1,0 +1,43 @@
+[
+  {
+    "name"              : "eth",
+    "cwd"               : "/var/log/ubuntu/bin/www/",
+    "script"            : "bin/eth.sh",
+    "args"              : "ethpassword",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_file"          : "/var/log/ubuntu/logs/eth-log.log",
+    "out_file"          : "/var/log/ubuntu/logs/eth-out.log",
+    "error_file"        : "/var/log/ubuntu/logs/eth-err.log",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "bash",
+    "exec_mode"         : "fork_mode"
+  },
+  {
+    "name"              : "node-app",
+    "cwd"               : "/var/log/ubuntu/bin/www/",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "log_file"          : "/var/log/ubuntu/logs/node-app-log.log",
+    "out_file"          : "/var/log/ubuntu/logs/node-app-out.log",
+    "error_file"        : "/var/log/ubuntu/logs/node-app-err.log",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "172.16.50.122",
+      "RPC_PORT"        : "6918",
+      "LISTENING_PORT"  : "30303",
+      "INSTANCE_NAME"   : "",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "wss://rpc.ethstats.net",
+      "WS_SECRET"       : "",
+      "VERBOSITY"       : 2
+    }
+  }
+]

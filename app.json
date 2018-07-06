@@ -1,0 +1,43 @@
+{
+  "name": "modena-app",
+  "script": "app.js",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "merge_logs": false,
+  "watch": false,
+  "max_restarts": 10,
+  "exec_interpreter": "node",
+  "exec_mode": "fork_mode",
+  "env": {
+    "NODE_ENV": "production",
+    "RPC_HOST": "172.16.50.114",
+    "RPC_PORT": "6918",
+    "LISTENING_PORT": "30303",
+    "INSTANCE_NAME": "eth",
+    "CONTACT_DETAILS": "",
+    "WS_SERVER": "http://localhost:3000",
+    "WS_SECRET": "eth-net-stats-has-a-secret",
+    "VERBOSITY": 2,
+    "LOG4JS_CONFIG": {
+      "appenders": {
+        "console": {
+          "type": "console"
+        },
+        "file": {
+          "type": "file",
+          "filename": "/project/ibeesaas/modena/logs/info.log",
+          "maxLogSize": 1024000000,
+          "backups": 3
+        }
+      },
+      "categories": {
+        "default": {
+          "appenders": [
+            "file"
+          ],
+          "level": "info"
+        }
+      }
+    }
+  }
+}
+
