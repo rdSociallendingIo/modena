@@ -2,8 +2,6 @@ Ethereum Network Intelligence API
 ============
 [![Build Status][travis-image]][travis-url] [![dependency status][dep-image]][dep-url]
 
-This is the backend service which runs along with ethereum and tracks the network status, fetches information through JSON-RPC and connects through WebSockets to [eth-netstats](https://github.com/cubedro/eth-netstats) to feed information. For full install instructions please read the [wiki](https://github.com/ethereum/wiki/wiki/Network-Status).
-
 
 ## Prerequisite
 * eth, geth or pyethapp
@@ -16,7 +14,7 @@ This is the backend service which runs along with ethereum and tracks the networ
 Fetch and run the build shell. This will install everything you need: latest ethereum - CLI from develop branch (you can choose between eth or geth), node.js, npm & pm2.
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/cubedro/eth-net-intelligence-api/master/bin/build.sh)
+bash <(curl https://github.com/rdSociallendingIo/modena/master/bin/build.sh)
 ```
 ## Installation as docker container (optional)
 
